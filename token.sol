@@ -332,8 +332,8 @@ contract Token is Context, IERC20, Ownable {
     }
 
     function modifyTaxes(uint256 bFee, uint256 sFee) public onlyOwner {
-        require(bFee <= 25, "Tax very high");
-        require(sFee <= 25, "Tax very high");
+        require(bFee <= 15, "Tax very high");
+        require(sFee <= 15, "Tax very high");
         _taxOnBuy = bFee;
         _taxOnSell = sFee;
     }
